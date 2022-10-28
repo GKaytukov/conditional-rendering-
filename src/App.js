@@ -1,22 +1,20 @@
-import logo from './logo.svg';
+import Hero from './components/Hero'; //#2
+import Movies from './components/Movies';
 import './App.css';
 
 function App() {
+  const myName = ''
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Hero /> 
+        <Movies />
+        {myName // # 0 Use Ternary like the if statement If my name is defined if my name is falsely put Login
+        ? <p>Welcome Back.</p> // # 0 If True
+        : <p>Please Login above.</p> //If False
+        
+        }
+        <p>Hello {myName || 'guest'}.</p>
       </header>
     </div>
   );
